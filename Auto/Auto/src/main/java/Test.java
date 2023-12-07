@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "D://Main Project Auototest//Chrome/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.google.com/"); // Старт
+        driver.get("https://www.google.com/"); // Старт afa
 
     }
 }
