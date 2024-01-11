@@ -1,6 +1,8 @@
 package common;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +21,7 @@ public class CommonAction {
                 case "win_chrome":
                     System.setProperty("webdriver.chrome.driver", "D://Main Project Auototest//Chrome/chromedriver.exe");
                     driver = new ChromeDriver();
+                    break;
                 default:
                     Assert.fail("Incorrect platfor or browser name: " + PLATFORM_AND_BROWSER);
             }
