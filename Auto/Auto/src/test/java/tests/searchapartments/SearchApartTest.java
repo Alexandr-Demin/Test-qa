@@ -12,10 +12,5 @@ public class SearchApartTest extends BaseTest {
        realtHomePage.enterCountRooms().clickToFind();
        realtListingPage.checkCountCards();
 
-
-
-
-
-
     }
 }

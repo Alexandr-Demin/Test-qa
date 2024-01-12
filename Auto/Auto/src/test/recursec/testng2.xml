@@ -5,7 +5,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="Search">
         <classes>
-                <class name="tests.searchapartments.SearchApartTest"></class>
+                <class name="tests.searchapartments.TestSout"></class>
         </classes>
 
     </test>

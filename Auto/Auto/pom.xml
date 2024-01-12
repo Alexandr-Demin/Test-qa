@@ -13,10 +13,9 @@
         <aspectj.version>1.8.10</aspectj.version>
         <testng.version>6.14.3</testng.version>
         <maven-sirefire-plugin.version>2.20</maven-sirefire-plugin.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <testngXML>testng.xml</testngXML>
     </properties>
 
     <dependencies>
@@ -44,13 +43,23 @@
     <build>
         <plugins>
             <plugin>
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-gpg-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>./src/test/recursec/${testngXML}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
+
